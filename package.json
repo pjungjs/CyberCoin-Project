@@ -1,0 +1,20 @@
+{
+  "name": "front-end-portfolio-project",
+  "version": "1.0.0",
+  "description": "My 1st Front-end Portfolio Project from Pursuit Module 2",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjungjs/Front-end-Portfolio-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pjungjs/Front-end-Portfolio-Project/issues"
+  },
+  "homepage": "https://github.com/pjungjs/Front-end-Portfolio-Project#readme"
+}
