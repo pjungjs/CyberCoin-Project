@@ -1,7 +1,8 @@
 # files and folders
 .DS_Store
 assets/
-check.js
+check.mjs
+chart.js
 
 # Logs
 logs

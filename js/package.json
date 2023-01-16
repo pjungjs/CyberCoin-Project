@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "My 1st Front-end Portfolio Project from Pursuit Module 2",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/pjungjs/Front-end-Portfolio-Project/issues"
   },
-  "homepage": "https://github.com/pjungjs/Front-end-Portfolio-Project#readme"
+  "homepage": "https://github.com/pjungjs/Front-end-Portfolio-Project#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
