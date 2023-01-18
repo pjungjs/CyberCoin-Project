@@ -2,6 +2,30 @@ body{
     padding-top: 75px;
 }
 
+.chartBox{
+    display: grid;
+    width: 20px;
+    place-items: center;
+}
+
+.resources{
+    display: grid;
+    font-size: large;
+    place-items: center;
+}
+
+.disclamer{
+    display: grid;
+    font-size: medium;
+    text-align: center;
+}
+
+.myChart{
+    display: grid;
+    text-align: center;
+}
+
+
 /* *{
     margin: 0;
     padding: 0;
@@ -44,31 +68,9 @@ body{
 img{
     display: grid;
     width: 20px;
-    
     place-items: center;
 }
 
 .coin .name{
     height: 100%;
-} */
-
-
-/* .coin .rising {
-    background: linear-gradient(
-        90deg, #202022, #4eb64510
-    );
-}
-
-.coin .rising .coin-price .price {
-    color: #30ff20;
-}
-
-.coin .falling {
-    background: linear-gradient(
-        90deg, #202022, #aa444425
-    );
-}
-
-.coin .falling .coin-price .price {
-    color: #ff4040;
 } */
