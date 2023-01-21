@@ -17,14 +17,14 @@
     <!-- Local CSS & JS -->
     <link rel="stylesheet" href="./style.css" />
     <script defer src="./main.js" type="module"></script>
-    <!-- <script defer src="./chart.js"></script> -->
+    <script defer src="./chart.js" type="module"></script>
+
     <title>CyberCoin Crypto Live Update</title>
 </head>
 <body>
     <div class="container">
-
         <!-- Header -->
-        <header class="header bg-light-subtle">
+        <header class="header bg-light-subtle" >
             <div class="row">
                 <div class="col-12">
                     <h3>Cryptocurrency Live Update</h3>
@@ -92,10 +92,11 @@
                     </select>
                 </div>
                 <div class="col-sm-auto align-content-right">
-                    <input type="submit">
+                    <input type="submit" value="Submit">
                 </div>
             </div>
         </form>
+        <form class="reset"><input type="submit" value="Reset"></form>
 
         <!-- Main Content -->
         <main>
@@ -109,9 +110,7 @@
 
         <div class="chartBox">
             <h3></h3>
-            <div>
-                <canvas id="myChart"></canvas>
-            </div>
+            <div id="myChart"></div>
         </div>
 
         <footer class="disclamer blockquote-footer" id="footer">

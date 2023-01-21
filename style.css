@@ -20,9 +20,15 @@ body{
     text-align: center;
 }
 
-.myChart{
+.chartBox{
     display: grid;
     text-align: center;
+    place-items: center;
+    padding: 20px;
+}
+
+.table-hover tbody tr:hover td {
+    background: lightcyan;
 }
 
 
