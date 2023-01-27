@@ -2,6 +2,15 @@ body{
     padding-top: 75px;
 }
 
+/* .home-page img{
+    opacity: 50%;
+} */
+
+/* .container{
+    text-align: center;
+    margin: 20px;
+} */
+
 .chartBox{
     display: grid;
     width: 20px;
@@ -20,17 +29,16 @@ body{
     text-align: center;
 }
 
-.chartBox{
-    display: grid;
-    text-align: center;
-    place-items: center;
+#myChart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
 }
 
 .table-hover tbody tr:hover td {
     background: lightcyan;
 }
-
 
 /* *{
     margin: 0;
@@ -53,15 +61,6 @@ body{
     justify-content: left;
     align-items: flex-start;
     max-width: 50px;
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0 0 3px white;
-    Border-radius: 5px;
 }
 
 .coin{

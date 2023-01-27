@@ -1,9 +1,8 @@
-//EXPORT the Coin Data Base built upon the API data.
-export { coinDataBase, resetTableContent };
-
-const coinDataBase = {};
+// //EXPORT the Coin Data Base built upon the API data.
+// export { coinDataBase, resetTableContent };
 
 const BASE_URL = "https://api.coincap.io/v2";
+const coinDataBase = {};
 
 //the reference for "priceChangeColor" function later.
 const lastPrice = [];
@@ -21,14 +20,18 @@ function convertUnixTimestamp(date) {
 that have elapsed since the ECMAScript epoch, 
 which is defined as the midnight at the beginning of January 1, 1970, UTC 
 (equivalent to the UNIX epoch). */
-    return new Date(date).toLocaleString();
     // const milliseconds = date * 1000; 
     // const humanDateFormat = new Date(milliseconds);
     // return humanDateFormat;
+    return new Date(date).toLocaleString();
 }
 
 //the reference for "priceChangeColor" function later.
 let num = 0;
+
+const tableHead = document.querySelector("thead");
+const tableBody = document.querySelector("tbody");
+const caption = document.querySelector("table caption");
 
 coinLiveData();
 setInterval(coinLiveData, 3000);
@@ -39,11 +42,7 @@ async function coinLiveData() {
         const currentTime = convertUnixTimestamp(result.timestamp);
         const timeWithoutSec = currentTime.slice(0, 15) + " " + currentTime.slice(19);
 
-        const caption = document.querySelector("table caption");
         caption.textContent = `Last Updated: ${currentTime} - Updating every 3 seconds.`;
-
-        const tableHead = document.querySelector("thead");
-        const tableBody = document.querySelector("tbody");
        
         if(tableHead && tableHead.children.length === 0) {
             const thCoinRank = document.createElement("td");
@@ -85,10 +84,10 @@ async function coinLiveData() {
                 Number(volumeUsd24Hr).toLocaleString("en-US"),
                 Number(changePercent24Hr).toLocaleString("en-US")
             ];
-
+            
             //adding data to the Coin Data Base.
             coinDataBase[symbol] = id;
-            
+
             //the reference for "priceChangeColor" function later.
             if(num === 0) {
                 lastPrice[i] = priceUsd;
@@ -163,7 +162,6 @@ async function coinLiveData() {
 
 
 function resetTableContent() {
-    const tableBody = document.querySelector("tbody");
     if(tableBody.innerText.length > 0) {        
         let child = tableBody.firstChild; 
         while (child) {
@@ -177,23 +175,3 @@ function resetTableContent() {
 function priceChangeColor(last, current) {
     return !current || last === current ? "black" : current > last ? "green" : "red";
 }
-
-// const trBody = document.querySelectorAll("tbody");
-// const imgAll = document.querySelectorAll(".logo");
-// console.log((trBody[0].childNodes), (trBody[0].children))
-// for (let i = 0; i < trBody[0].children; i++) {
-//     console.log('w')
-// }
-// trBody.addEventListener("click", event => {
-//     event.preventDefault;
-//     // console.log(event.target) // logs clicked td element
-//     // console.log(event.target.getAttribute("class")) // logs clicked element's class
-//     // console.log(event.path[1].getAttribute("class")) // logs clicked table row's class
-//     //
-//     // <td class="coin name">
-//     //     <img class="coin img-fluid" alt="logo" src="../assets/crypto-img-png/bitcoin-btc-logo.png" width="30">
-//     //     <a href="${explorer}" target="_blank" rel="noopener noreferrer">${name}</a> (${symbol})
-//     // </td>
-//     /** <a href="#" target="_blank" rel="noopener noreferrer">${name}</a>
-//     * Setting it to "noopener noreferrer" is to prevent a type of phishing known as tabnabbing. **/
-// });
