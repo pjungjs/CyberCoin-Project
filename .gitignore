@@ -1,7 +1,5 @@
 # files and folders
 .DS_Store
-./js/check.mjs
-./js/notes.js
 
 # Logs
 logs
