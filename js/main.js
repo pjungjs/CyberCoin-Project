@@ -143,7 +143,7 @@ async function coinLiveData() {
             const tdCoinChangeOneDay = document.createElement("td");
             tdCoinChangeOneDay.setAttribute("class", "coin changeOneDay");
             tdCoinChangeOneDay.setAttribute("style", `color:${priceChangeColor(lastChangePercent[i], currChangePercent[i])}`);
-            tdCoinChangeOneDay.textContent = `$ ${arrOfPrices[3]}`;
+            tdCoinChangeOneDay.textContent = `${arrOfPrices[3]} %`;
 
             tableBody.appendChild(tr);
             tdCoinName.prepend(tdCoinNameLink)
